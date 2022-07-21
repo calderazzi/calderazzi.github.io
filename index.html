@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ICONOS -->
+    <script src="https://kit.fontawesome.com/d7d9422d2d.js" crossorigin="anonymous"></script>
+    <!-- ESTILOS CSS -->
+    <style>
+body {
+    background: lightgray;
+}
+
+.container {
+    background: black;
+    width: 78vw;
+    margin: auto;
+    margin-top: 3%;
+    color: rgb(5, 249, 5);
+    border: 3px solid rgb(5, 249, 5);
+    border-radius: 30px;
+}
+
+header {
+    display: flex;
+    border-bottom: 2px solid rgb(5, 249, 5);
+    
+}
+
+.perfil {
+    display: flex;
+    border-bottom: 2px solid rgb(5, 249, 5);
+    padding: 30px 0;
+}
+
+.proyectos {
+    display: flex;
+    border-bottom: 2px solid rgb(5, 249, 5);
+    padding: 30px 0;
+    padding-bottom: 50px;
+}
+
+footer {
+    padding: 20px;
+}
+
+img {
+    width: 9vw;
+    border-radius: 50%;
+    margin: 20px;
+    border: 2px solid rgb(5, 249, 5);
+}
+img:hover {
+    transition: all .5s;
+    width: 10vw;
+}
+
+.titulo {
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5vw;
+}
+
+h6 {
+    margin: 60px 30px;
+    text-align: center;
+    font-size: 24px;
+}
+
+p {
+    margin: 30px;
+    font-size: 25px;
+    text-align: left;
+    line-height: 50px;
+}
+a {
+    text-decoration: none;
+    border: 1.5px solid blue;
+    font-size: 22px;
+    color: blue;
+    padding: 5px;
+    margin-left: 40px;
+}
+a:hover {
+    transition: all .5s;
+    font-size: 25px;
+}
+
+.pro {
+    margin: 30%;
+}
+
+ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+i {
+    font-size: 22px;
+    color: white;
+    padding: 10px;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1115px) {
+    .container {
+        width: 85vw;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .container {
+        width: 90vw;
+    }
+    a {
+        margin-left: 25px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .container {
+        width: 95%;
+        margin: 10px;
+    }
+    a {
+        margin-left: 15px;
+    }
+    .pro {
+        margin: 10%;
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    .container {
+        width: 98%;
+        margin: 20px;
+    }
+    body {
+        margin: 0;
+    }    
+    li {
+        margin: 20px 20%;        
+    }
+    ul {
+        display: block;
+        
+    }
+    i {
+       margin: 15px; 
+    }
+}
+
+@media only screen and (max-width: 710px) {
+    .container {
+        margin: 0;
+    }
+    .perfil {
+        display: block;
+        margin: 5px;
+    }
+    .proyectos {
+        display: block;
+        margin: 5px;
+    }
+    h6 {
+        text-decoration: underline;
+    }
+    li {
+        margin: 0;
+    }
+    a {
+        margin: 0;
+    }
+    i {
+        margin: 10px;
+        padding: 1px;
+    }
+    footer {
+        padding: 5px;
+    }
+}
+
+    </style>
+    <title>Portafolio personal Wilson Calderazzi</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEtqSafLzx2Jw/profile-displayphoto-shrink_800_800/0/1656710915381?e=1663804800&v=beta&t=m1Ks5Iwhu_6a5QQGuLOrqsuLXav_t1fo1mLi_YkLgWk" alt="Foto Wilson Calderazzi">
+            <div class="titulo">
+            <h1>WILSON CALDERAZZI</h1>
+            <h3>Programador junior</h5>
+            </div>
+        </header>
+        <section class="perfil">
+            <h6>PERFIL PROFESIONAL</h6>
+            <p>Conocimientos de HTML y CSS, actualmente reforzando los conocimientos de JAVASCRIPT cursando en coderhouse, estoy interesado en trabajar en algun área de tecnología mientras sigo estiudiando y perfeccionandome. Soy autodidacta y me gustan los desafios y si no encuentro la solución a un problema, busco por todos los medios la solución.</p>
+        </section>
+        <section class="proyectos">
+            <h6>PROYECTOS</h6>
+            <div>
+                <P>Unos de mis primeros proyectos como autodidacta fue este:</P>
+                <a class="pro" href="http://manicura-barbara.ga" target="_blank" rel="noopener noreferrer">Manicura Barbara</a>
+                <p>Un proyecto mas nuevo:</p>
+                <a class="pro" href="http://taurum.ga" target="_blank" rel="noopener noreferrer">Salón Taurum</a>
+                <p>Tambien tengo otros proyectos subidos en mi gitHub:</p>
+                <a class="pro" href="http://www.github.com/calderazzi" target="_blank" rel="noopener noreferrer">gitHub</a>
+            </div>
+        </section>
+        <footer>
+            <ul>
+                <li><a href="http://www.linkedin.com/in/wilson-calderazzi-2718551b5/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
+                <li><a href="http://www.github.com/calderazzi" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>gitHub</a></li>
+                <li><a href="http://wa.me/543834322324?text=Me%20contacto%20para%20que%20trabaje%20con%20nosotros" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i>3834322324</a></li>
+                <li><a href="mailto:invirtiendoo@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i>invirtiendoo@gmail.com</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
