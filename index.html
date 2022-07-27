@@ -9,11 +9,11 @@
     <!-- ESTILOS CSS -->
     <style>
 body {
-    background: lightgray;
+    background-image: linear-gradient(to right, rgb(108, 105, 105), rgb(51, 48, 48), rgb(50, 46, 46));
 }
 
 .container {
-    background: black;
+    background-image: radial-gradient(rgb(46, 4, 4), black);
     width: 78vw;
     margin: auto;
     margin-top: 3%;
@@ -42,18 +42,36 @@ header {
 }
 
 footer {
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
 }
 
-img {
+#css {
+    position: absolute;
+    height: 95px;
+    margin: 20px;
+    margin-top: 150px;
+    border-radius: 20px;
+}
+
+#yo {
+    position: absolute;
     width: 9vw;
     border-radius: 50%;
     margin: 20px;
     border: 2px solid rgb(5, 249, 5);
+    animation: aparece 4s;
 }
-img:hover {
-    transition: all .5s;
-    width: 10vw;
+@keyframes aparece {
+    from {
+        margin-left: -100px;
+        width: 0;
+    }
+    to {
+        width: 9vw;
+    }
 }
 
 .titulo {
@@ -62,10 +80,36 @@ img:hover {
 }
 
 h1 {
+    font-family: monospace;
     font-size: 3.5vw;
+    float: left;
+    position: relative;
+}
+
+h1 span {
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: black;
+    border-left: 1px solid black;
+    animation: maquina 5s alternate steps(17);
+}
+@keyframes maquina {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+h5 {
+    font-size: 25px;
+    font-family: cursive;
 }
 
 h6 {
+    font-family: monospace;
     margin: 60px 30px;
     text-align: center;
     font-size: 24px;
@@ -79,11 +123,11 @@ p {
 }
 a {
     text-decoration: none;
-    border: 1.5px solid blue;
+    border: 1.5px solid lightgreen;
     font-size: 22px;
-    color: blue;
+    color: lightgreen;
     padding: 5px;
-    margin-left: 40px;
+    margin: 0px 15px 30px 15px;
 }
 a:hover {
     transition: all .5s;
@@ -91,7 +135,13 @@ a:hover {
 }
 
 .pro {
-    margin: 30%;
+    display: block;
+    text-align: center;
+}
+
+#div-pro {
+    background-image: radial-gradient(rgb(57, 5, 5), rgb(21, 21, 21));
+    width: 78%;
 }
 
 ul {
@@ -122,7 +172,7 @@ i {
     }
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 995px) {
     .container {
         width: 95%;
         margin: 10px;
@@ -130,12 +180,13 @@ i {
     a {
         margin-left: 15px;
     }
-    .pro {
-        margin: 10%;
+    #css {
+        height: 100px;
+        width: 175px;
     }
 }
 
-@media only screen and (max-width: 890px) {
+@media only screen and (max-width: 935px) {
     .container {
         width: 98%;
         margin: 20px;
@@ -143,15 +194,25 @@ i {
     body {
         margin: 0;
     }    
-    li {
-        margin: 20px 20%;        
-    }
+
     ul {
         display: block;
         
     }
     i {
        margin: 15px; 
+    }
+    #div-pro {
+        width: 75%;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h5 {
+        font-size: 19px;
+    }
+    #yo {
+        width: 14vw;
     }
 }
 
@@ -183,31 +244,70 @@ i {
     footer {
         padding: 5px;
     }
+    #div-pro {
+        margin: auto;
+        padding: 10px;
+        width: 90%;
+    }
+
+    h5 {
+        font-size: 15px;
+    }
+    #css {
+        top: 88px;
+        height: 90px;
+        width: 165px;
+        left: 32%;
+    }
+    #perfil-responsive {
+        margin-top: 10px;
+        margin-bottom: 120px;
+    }
+    
 }
 
+@media only screen and (max-width: 510px) {
+    #css {
+        top: 140px;
+        height: 90px;
+        width: 165px;
+        left: 18%;
+    }
+    h6 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+
+
     </style>
-    <title>Portafolio personal Wilson Calderazzi</title>
+    <title>Portafolio Wilson Calderazzi</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="yo.jpg" alt="Foto Wilson Calderazzi">
+            <img id="yo" src=yo.jpg alt="Foto Wilson Calderazzi">
             <div class="titulo">
-            <h1>WILSON CALDERAZZI</h1>
-            <h3>Programador junior</h5>
+            <h1>WILSON CALDERAZZI<span>&#160</span></h1>
+            <h5>Programador junior</h5>
             </div>
         </header>
         <section class="perfil">
-            <h6>PERFIL PROFESIONAL</h6>
-            <p>Conocimientos de HTML y CSS, actualmente reforzando los conocimientos de JAVASCRIPT cursando en coderhouse, estoy interesado en trabajar en algun área de tecnología mientras sigo estiudiando y perfeccionandome. Soy autodidacta y me gustan los desafios y si no encuentro la solución a un problema, busco por todos los medios la solución.</p>
+            <h6 id="perfil-responsive">PERFIL PROFESIONAL</h6>
+            <p>Conocimientos de HTML, CSS y GIT, actualmente reforzando los conocimientos de JAVASCRIPT cursando en Coderhouse. Estoy interesado en trabajar en algun área de tecnología mientras sigo estiudiando y perfeccionandome. Soy autodidacta y me gustan los desafios y si no encuentro la solución a un problema, busco por todos los medios la solución.</p>
+            <img id="css" src="HTML-CSS-y-JavaScriptl.png" alt="logo html, css y javascript">
         </section>
         <section class="proyectos">
             <h6>PROYECTOS</h6>
-            <div>
+            <div id="div-pro">
                 <P>Unos de mis primeros proyectos como autodidacta fue este:</P>
                 <a class="pro" href="http://manicura-barbara.ga" target="_blank" rel="noopener noreferrer">Manicura Barbara</a>
+                <p>Otro proyecto mas complejo:</p>
+                <a class="pro" href="https://calderazzi.github.io/taurum/" target="_blank" rel="noopener noreferrer">Salón Taurum</a>
                 <p>Un proyecto mas nuevo:</p>
-                <a class="pro" href="http://taurum.ga" target="_blank" rel="noopener noreferrer">Salón Taurum</a>
+                <a class="pro" href="https://calderazzi.github.io/viva-la-frida/" target="_blank" rel="noopener noreferrer">Viva la frida</a>
                 <p>Tambien tengo otros proyectos subidos en mi gitHub:</p>
                 <a class="pro" href="http://www.github.com/calderazzi" target="_blank" rel="noopener noreferrer">gitHub</a>
             </div>
@@ -216,7 +316,7 @@ i {
             <ul>
                 <li><a href="http://www.linkedin.com/in/wilson-calderazzi-2718551b5/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
                 <li><a href="http://www.github.com/calderazzi" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>gitHub</a></li>
-                <li><a href="http://wa.me/543834322324?text=Me%20contacto%20para%20que%20trabaje%20con%20nosotros" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i>3834322324</a></li>
+                <li><a href="http://wa.me/543834322324?text=Me%20contacto%20para%20que%20trabaje%20con%20nosotros" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i>+543834322324</a></li>
                 <li><a href="mailto:invirtiendoo@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i>invirtiendoo@gmail.com</a></li>
             </ul>
         </footer>
