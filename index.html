@@ -149,7 +149,7 @@ ul {
     list-style: none;
 }
 
-i {
+em {
     font-size: 22px;
     color: white;
     padding: 10px;
@@ -200,7 +200,7 @@ i {
         
     }
     i {
-       margin: 15px; 
+        margin: 15px; 
     }
     #div-pro {
         width: 75%;
@@ -266,6 +266,38 @@ i {
     
 }
 
+#cert {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+}
+
+button {
+    position: absolute;
+    margin-left: 52px;
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: rgb(255, 196, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px gray;
+}
+button:active {
+    scale: 0.9;
+}
+button:hover {
+    color: red;
+}
+
+#x {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    z-index: 100;
+}
+
 @media only screen and (max-width: 510px) {
     #css {
         top: 140px;
@@ -288,27 +320,31 @@ i {
         <header>
             <img id="yo" src=yo.jpg alt="Foto Wilson Calderazzi">
             <div class="titulo">
-            <h1>WILSON CALDERAZZI<span>&#160</span></h1>
+            <h1 id="nombre">WILSON CALDERAZZI<span>&#160</span></h1>
             <h5>Frontend developer</h5>
             </div>
         </header>
         <section class="perfil">
             <h6 id="perfil-responsive">PERFIL PROFESIONAL:</h6>
-            <p>Conocimientos de HTML, CSS, GIT y JAVASCRIPT. Ingles básico. Estoy interesado en trabajar en algun área de tecnología mientras sigo estiudiando y perfeccionandome. Soy autodidacta y me gustan los desafios y si no encuentro la solución a un problema, busco por todos los medios la solución. Estoy dispuesto a estudiar las tecnologías necesarias para poder unirme a sus proyectos.</p>
+            <p>Conocimientos de HTML, CSS, GIT y JAVASCRIPT. Ingles intermedio. Estoy interesado en trabajar en algun área de tecnología mientras sigo estiudiando y perfeccionandome. Soy autodidacta y me gustan los desafios y si no encuentro la solución a un problema, busco por todos los medios la solución. Estoy dispuesto a estudiar las tecnologías necesarias para poder unirme a sus proyectos.</p>
             <img id="css" src="HTML-CSS-y-JavaScriptl.png" alt="logo html, css y javascript">
+            <button onclick="certificado()">Certificado JS</button>
+            <div id="certificado"></div>
         </section>
         <section class="proyectos">
             <h6>PROYECTOS:</h6>
             <div id="div-pro">
-                <P>Unos de mis primeros proyectos como autodidacta fue este:</P>
-                <a class="pro" href="http://manicura-barbara.ga" target="_blank" rel="noopener noreferrer">Manicura Barbara</a>
-                <p>Otro proyecto mas complejo:</p>
+                <p>Proyecto final consumiendo api de mercado libre:</p>
+                <a class="pro" href="https://calderazzi.github.io/proyectoFinal/" target="_blank" rel="noopener noreferrer">Proyecto Final Coderhause</a>
+                <p>Proyecto Salón de Fiestas:</p>
                 <a class="pro" href="https://calderazzi.github.io/taurum/" target="_blank" rel="noopener noreferrer">Salón Taurum</a>
                 <p>Proyecto para coderhouse:</p>
                 <a class="pro" href="https://calderazzi.github.io/simulador/" target="_blank" rel="noopener noreferrer">Proyecto Coderhouse</a>
-                <p>Un proyecto mas:</p>
+                <P>Proyecto para Manicura:</P>
+                <a class="pro" href="http://manicura-barbara.ga" target="_blank" rel="noopener noreferrer">Manicura Barbara</a>
+                <p>Proyecto Articulos varios:</p>
                 <a class="pro" href="https://calderazzi.github.io/viva-la-frida/" target="_blank" rel="noopener noreferrer">Viva la frida</a>
-                <p>Un proyecto mas nuevo:</p>
+                <p>Proyecto Masajes:</p>
                 <a class="pro" href="https://calderazzi.github.io/Masajes/" target="_blank" rel="noopener noreferrer">Masajes Leti</a>
                 <p>Tambien tengo otros proyectos subidos en mi gitHub:</p>
                 <a class="pro" href="http://www.github.com/calderazzi" target="_blank" rel="noopener noreferrer">gitHub</a>
@@ -316,12 +352,26 @@ i {
         </section>
         <footer>
             <ul>
-                <li><a href="http://www.linkedin.com/in/wilson-calderazzi-2718551b5/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
-                <li><a href="http://www.github.com/calderazzi" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>gitHub</a></li>
-                <li><a href="http://wa.me/543834322324?text=Me%20contacto%20para%20que%20trabaje%20con%20nosotros" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i>+543834322324</a></li>
-                <li><a href="mailto:invirtiendoo@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i>invirtiendoo@gmail.com</a></li>
+                <li><a href="http://www.linkedin.com/in/wilson-calderazzi-2718551b5/" target="_blank" rel="noopener noreferrer"><em class="fa-brands fa-linkedin"></em>Linkedin</a></li>
+                <li><a href="http://www.github.com/calderazzi" target="_blank" rel="noopener noreferrer"><em class="fa-brands fa-github"></em>gitHub</a></li>
+                <li><a href="http://wa.me/543834322324?text=Me%20contacto%20para%20que%20trabaje%20con%20nosotros" target="_blank" rel="noopener noreferrer"><em class="fa-brands fa-whatsapp"></em>+543834322324</a></li>
+                <li><a href="mailto:invirtiendoo@gmail.com" target="_blank" rel="noopener noreferrer"><em class="fa-solid fa-envelope"></em>invirtiendoo@gmail.com</a></li>
             </ul>
         </footer>
     </div>
 </body>
+<script>
+    function certificado() {
+        document.getElementById("certificado").style.display = "block";
+        let certificado = document.getElementById("certificado");
+        certificado.innerHTML = `
+        <div>
+            <button id="x" onclick="cerrar()">X</button>
+            <img id="cert" src=certificado.png alt="Foto Wilson Calderazzi">
+        </div>`
+    }
+    function cerrar() {
+        document.getElementById("certificado").style.display = "none";
+    }
+</script>
 </html>
