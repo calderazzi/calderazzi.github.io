@@ -24,9 +24,62 @@ body {
     border-radius: 30px;
 }
 
+.box {
+    left: 33%;
+    position: relative;
+    width: 475px;
+    height: 183px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.box::before {
+    content: '';
+    position: absolute;
+    left: -80px;
+    top: -120px;
+    width: 280px;
+    height: 220px;
+    background: linear-gradient(0deg, transparent, rgb(5, 249, 5), rgb(5, 249, 5));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after {
+    content: '';
+    position: absolute;
+    width: 280px;
+    left: -80px;
+    top: -120px;
+    height: 220px;
+    background: linear-gradient(0deg, transparent, rgb(5, 249, 5), rgb(5, 249, 5));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.titulo {
+    padding: 10px;
+    margin: 20px;
+    position: absolute;
+    inset: 2px;
+    z-index: 10;
+    background-color: black;
+    border-radius: 8px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 header {
     display: flex;
     border-bottom: 2px solid rgb(5, 249, 5);
+    padding: 10px;
 }
 
 .perfil {
@@ -42,6 +95,7 @@ header {
     top: 10%;
     left: 10%;
     border-radius: 15px;
+    z-index: 100;
 }
 
 button {
@@ -64,9 +118,9 @@ button:hover {
 
 #x {
     position: absolute;
-    top: 15%;
+    top: 4%;
     left: 10%;
-    z-index: 100;
+    z-index: 200;
 }
 
 
@@ -201,6 +255,9 @@ em {
 /* RESPONSIVE */
 
 @media only screen and (max-width: 1168px) {
+    .box {
+        width: 400px;
+    }
     .container {
         width: 85vw;
     }
@@ -263,6 +320,21 @@ em {
 }
 
 @media only screen and (max-width: 710px) {
+    #x {
+        left: 5%;
+        top: 2%;
+    }
+    #cert {
+        width: 90%;
+        height: 70%;
+        left: 5%;
+    }
+    
+    .box {
+        width: 330px;
+        height: 150px;
+        left: 140px;
+    }
 
     h1 {
         font-size: 30px;
@@ -333,6 +405,21 @@ em {
 
 
 @media only screen and (max-width: 510px) {
+    #x {
+        left: 0%;
+        top: -8%;
+    }
+    #cert {
+    width: 95%;
+    height: 60%;
+    top: 10%;
+    left: 1%;
+}
+    .box {
+        width: 280px;
+        height: 130px;
+        left: 110px;
+    }
     h1 {
         font-size: 25px;
     }
@@ -342,29 +429,45 @@ em {
     p {
         font-size: 20px;
     }
+    button {
+        top: 140px;
+        left: 20%;
+    }
+    #css {
+        top: 140px;
+        left: 2%;
+    }
+    #angular {
+        top: 30px;
+        left: 44%;
+    }
+    #perfil-responsive {
+        margin-top: -10px;
+    }
+    .parrafo {
+        margin-top: 170px;
+    }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
+    #cert {
+    height: 50%;
+    top: 0%;
+    left: 0%;
+}
+    .box {
+        width: 230px;
+        height: 120px;
+        left: 80px;
+    }
     .container {
         width: 95%;
     }
     h1 {
         font-size: 21px;
     }
-    button {
-        top: 120px;
-        left: 20%;
-    }
-    #css {
-        top: 120px;
-        left: 2%;
-    }
-    #angular {
-        top: 5px;
-        left: 44%;
-    }
+
     .parrafo {
-        margin-top: 170px;
         line-height: 1.5;
     }
     p {
@@ -381,14 +484,16 @@ h6 {
     <div class="container">
         <header>
             <img id="yo" src=yo.jpg alt="Foto Wilson Calderazzi">
+            <div class="box">
             <div class="titulo">
-            <h1 id="nombre">WILSON CALDERAZZI<span>&#160</span></h1>
-            <h5>Frontend developer</h5>
+                <h1 id="nombre">WILSON CALDERAZZI<span>&#160</span></h1>
+                <h5>Frontend developer</h5>
+            </div>
             </div>
         </header>
         <section class="perfil">
             <h6 id="perfil-responsive">PERFIL PROFESIONAL:</h6>
-            <p class="parrafo">Conocimientos de HTML, CSS, GIT, JAVASCRIPT y Angular. Ingles intermedio. Estoy interesado en trabajar en algún área de tecnología mientras sigo estiudiando y perfeccionandome, también si la empresa tiene entrenamiento estoy dispuesto a tomarlo para mejorar mis habilidades. Soy autodidacta y me gustan los desafios y si no encuentro la solución a un problema, busco por todos los medios la solución. Estoy dispuesto a estudiar las tecnologías necesarias para poder unirme a sus proyectos. Me gusta ayudar a mis compañeros cuando no logran comprender algo y estyo dispuesto a sumar al grupo de trabajo del que participe.</p>
+            <p class="parrafo">Conocimientos de HTML, CSS, GIT, JAVASCRIPT y Angular. Ingles intermedio. Estoy interesado en trabajar en algún área de tecnología en donde pueda aplicar mis conocimientos mientras sigo estiudiando y perfeccionandome, también si la empresa tiene capacitaciones estoy dispuesto a tomarlas para mejorar mis habilidades y poder brindar lo que me pidan. Soy autodidacta y me gustan los desafios y si no encuentro la solución a un problema, busco por todos los medios la solución. Me gusta ayudar a mis compañeros cuando no logran comprender algún código y estoy listo para aportar mis conocimientos al grupo de trabajo del que participe. Actualmente estoy estudiando programación orientada a objetos en el centro de educación técnico profesional de Catamarca (C++ y python).</p>
             <img id="css" src="HTML-CSS-y-JavaScriptl.png" alt="logo html, css y javascript">
             <img id="angular" src="angular.png" alt="Logo de Angular">
             <button onclick="certificado()">Certificado JS</button>
@@ -418,7 +523,7 @@ h6 {
                 <li><a href="http://www.linkedin.com/in/wilson-calderazzi-2718551b5/" target="_blank" rel="noopener noreferrer"><em class="fa-brands fa-linkedin"></em>Linkedin</a></li>
                 <li><a href="http://www.github.com/calderazzi" target="_blank" rel="noopener noreferrer"><em class="fa-brands fa-github"></em>gitHub</a></li>
                 <li><a href="http://wa.me/543834322324?text=Me%20contacto%20para%20que%20trabaje%20con%20nosotros" target="_blank" rel="noopener noreferrer"><em class="fa-brands fa-whatsapp"></em>+543834322324</a></li>
-                <li><a href="mailto:invirtiendoo@gmail.com" target="_blank" rel="noopener noreferrer"><em class="fa-solid fa-envelope"></em>invirtiendoo@gmail.com</a></li>
+                <li><a href="mailto:invirtiendoo@gmail.com" target="_blank" rel="noopener noreferrer"><em class="fa-solid fa-envelope"></em>vidayfuturo3@gmail.com</a></li>
             </ul>
         </footer>
     </div>
