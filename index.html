@@ -27,18 +27,18 @@ body {
 .box {
     left: 33%;
     position: relative;
-    width: 475px;
-    height: 183px;
+    width: 45%;
+    height: 13.5vw;
     border-radius: 8px;
     overflow: hidden;
 }
 .box::before {
     content: '';
     position: absolute;
-    left: -80px;
-    top: -120px;
-    width: 280px;
-    height: 220px;
+    left: 270px;
+    top: -320px;
+    width: 100px;
+    height: 470px;
     background: linear-gradient(0deg, transparent, rgb(5, 249, 5), rgb(5, 249, 5));
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
@@ -46,10 +46,10 @@ body {
 .box::after {
     content: '';
     position: absolute;
-    width: 280px;
-    left: -80px;
-    top: -120px;
-    height: 220px;
+    width: 100px;
+    left: 270px;
+    top: -320px;
+    height: 470px;
     background: linear-gradient(0deg, transparent, rgb(5, 249, 5), rgb(5, 249, 5));
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
@@ -158,7 +158,7 @@ footer {
     position: absolute;
     width: 10vw;
     border-radius: 50%;
-    margin: 25px;
+    margin: 20px;
     animation: aparece 5s;
     box-shadow: 1px 1px 3px 5px rgb(184, 182, 182);
 }
@@ -254,9 +254,9 @@ em {
 
 /* RESPONSIVE */
 
-@media only screen and (max-width: 1168px) {
+@media only screen and (max-width: 1380px) {
     .box {
-        width: 400px;
+        width: 46%;
     }
     .container {
         width: 85vw;
@@ -290,13 +290,20 @@ em {
 }
 
 @media only screen and (max-width: 966px) {
+    .box {
+        height: 16vw;
+    }
     .container {
         width: 98%;
         margin: 20px;
     }
     body {
         margin: 0;
-    }    
+    }
+
+    #nombre {
+        font-size: 35px;
+    }
 
     ul {
         display: block;
@@ -315,11 +322,11 @@ em {
         font-size: 19px;
     }
     #yo {
-        width: 14vw;
+        width: 11vw;
     }
 }
 
-@media only screen and (max-width: 710px) {
+@media only screen and (max-width: 830px) {
     #x {
         left: 5%;
         top: 2%;
@@ -330,15 +337,14 @@ em {
         left: 5%;
     }
     
-    .box {
-        width: 330px;
-        height: 150px;
-        left: 140px;
+    #nombre {
+        font-size: 3.7vw;
     }
 
-    h1 {
-        font-size: 30px;
+    .box {
+
     }
+
     .container {
         margin: 0;
     }
@@ -373,7 +379,7 @@ em {
     }
 
     #yo {
-        width: 12vw;
+        width: 10vw;
     }
 
     h5 {
@@ -415,14 +421,7 @@ em {
     top: 10%;
     left: 1%;
 }
-    .box {
-        width: 280px;
-        height: 130px;
-        left: 110px;
-    }
-    h1 {
-        font-size: 25px;
-    }
+
     h6 {
         font-size: 20px;
     }
@@ -463,8 +462,8 @@ em {
     .container {
         width: 95%;
     }
-    h1 {
-        font-size: 21px;
+    #nombre {
+        font-size: 20px;
     }
 
     .parrafo {
@@ -476,6 +475,10 @@ em {
 }
 h6 {
     margin: 10px ;
+}
+#yo {
+    width: 60px;
+    margin-left: 3px;
 }
 
     </style>
@@ -523,7 +526,7 @@ h6 {
                 <li><a href="http://www.linkedin.com/in/wilson-calderazzi-2718551b5/" target="_blank" rel="noopener noreferrer"><em class="fa-brands fa-linkedin"></em>Linkedin</a></li>
                 <li><a href="http://www.github.com/calderazzi" target="_blank" rel="noopener noreferrer"><em class="fa-brands fa-github"></em>gitHub</a></li>
                 <li><a href="http://wa.me/543834322324?text=Me%20contacto%20para%20que%20trabaje%20con%20nosotros" target="_blank" rel="noopener noreferrer"><em class="fa-brands fa-whatsapp"></em>+543834322324</a></li>
-                <li><a href="mailto:invirtiendoo@gmail.com" target="_blank" rel="noopener noreferrer"><em class="fa-solid fa-envelope"></em>vidayfuturo3@gmail.com</a></li>
+                <li><a href="mailto:vidayfuturo3@gmail.com" target="_blank" rel="noopener noreferrer"><em class="fa-solid fa-envelope"></em>vidayfuturo3@gmail.com</a></li>
             </ul>
         </footer>
     </div>
