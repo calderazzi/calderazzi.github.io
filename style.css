@@ -88,7 +88,13 @@ body{
   font-size: 18px;
   left: 150px;
 }
-
+.descarga {
+  margin-left: 130px;
+  font-size: 15px;
+  font-weight: bolder;
+  padding: 5px;
+  cursor: pointer;
+}
 .proyectos {
   color: white;
   width: 300px;
@@ -223,7 +229,7 @@ mat-icon {
   }
   .proyectos {
     left: 100px;
-    top: 560px;
+    top: 580px;
   }
   body{
     height: 160vh;
@@ -271,7 +277,7 @@ mat-icon {
     width: 94%;
   }
   .proyectos {
-    top: 610px;
+    top: 635px;
     left: 0;
     width: 94%;
   }
@@ -280,5 +286,11 @@ mat-icon {
   }
   .contacto {
     bottom: -450px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .proyectos {
+    top: 670px;
   }
 }
